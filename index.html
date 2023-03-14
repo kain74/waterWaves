@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Wave</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </head>
 <body>
     <section>
         <div class="waves">
             <img src="./img/cloud.jpg" alt="water wave">
-            <h1 id="text" contenteditable="">Water Wave</h1>
-            <img src="./img/unin_island.png" alt="" class="island">
+            <h1 id="text" contenteditable=""><span class="layer" data-depth-x="0.1">Water Wave</span></h1>
+            <p id="img"><span  class="layer" data-depth-x="-0.3"><img src="./img/unin_island.png" alt="" class="island"></span></p>
             <div class="wave" data-img="wave1"></div>
             <div class="wave" data-img="wave2"></div>
             <div class="wave" data-img="wave3"></div>
@@ -32,11 +33,15 @@
     </div>
     <script>
         const text = document.getElementById('text');
+        const img = document.getElementById('img');
         let shadow = '';
+        let paraalax1 = new Parallax(text);
+        let paraalax2 = new Parallax(img);
         for(var i=0; i < 30; i++){
             shadow += (shadow? ',': '') + i*1+'px ' + i*1+'px 0 #ffe8a0';
         }
         text.style.textShadow = shadow;
+        
     </script>
 </body>
 </html>
