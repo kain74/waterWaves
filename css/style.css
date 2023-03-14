@@ -40,6 +40,10 @@ section {
 section .waves {
   position: relative;
 }
+section .waves .img-cloud {
+  transform: scale(1);
+  animation: animate-cloud 20s linear infinite;
+}
 section .waves .wave {
   position: absolute;
   left: 0;
@@ -107,6 +111,17 @@ section .waves .island {
   pointer-events: none;
 }
 
+@keyframes animate-cloud {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes animate {
   0% {
     background-position-x: 1000px;
