@@ -93,6 +93,10 @@ section .waves h1 {
   border: 0;
   outline: none;
 }
+section .waves h1 span {
+  font-weight: bold;
+  font-family: "Arial";
+}
 section .waves .island {
   position: absolute;
   left: 50%;

@@ -73,6 +73,10 @@ section{
             text-transform: uppercase;
             border:0;
             outline:none;
+            span{
+                font-weight: bold;
+                font-family: "Arial";
+            }
         }
         .island{
             position: absolute;
